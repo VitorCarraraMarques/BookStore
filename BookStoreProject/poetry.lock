@@ -113,6 +113,17 @@ files = [
 test = ["pytest (>=6)"]
 
 [[package]]
+name = "factory"
+version = "1.2"
+description = "Object Oriented Currying"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "Factory-1.2.tar.gz", hash = "sha256:c0af96e123ac9164ca7d1b9905de749f94e819c8e85341c8fb9f1dd2e349c8cc"},
+]
+
+[[package]]
 name = "factory-boy"
 version = "3.2.1"
 description = "A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby."
@@ -288,4 +299,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "146a198ef462bf3ffa405fa5aebf44e9199fff6100e99d5ff0e6e16f13649428"
+content-hash = "71816f91f19648698e89cafbcba9871ec805c9d3f41b6bde2e0601772ac86cd7"
