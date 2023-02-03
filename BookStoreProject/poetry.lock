@@ -68,6 +68,21 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-extensions"
+version = "3.2.1"
+description = "Extensions for Django"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "django-extensions-3.2.1.tar.gz", hash = "sha256:2a4f4d757be2563cd1ff7cfdf2e57468f5f931cc88b23cf82ca75717aae504a4"},
+    {file = "django_extensions-3.2.1-py3-none-any.whl", hash = "sha256:421464be390289513f86cb5e18eb43e5dc1de8b4c27ba9faa3b91261b0d67e09"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "django-rest-framework"
 version = "0.1.0"
 description = "alias."
@@ -111,17 +126,6 @@ files = [
 
 [package.extras]
 test = ["pytest (>=6)"]
-
-[[package]]
-name = "factory"
-version = "1.2"
-description = "Object Oriented Currying"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "Factory-1.2.tar.gz", hash = "sha256:c0af96e123ac9164ca7d1b9905de749f94e819c8e85341c8fb9f1dd2e349c8cc"},
-]
 
 [[package]]
 name = "factory-boy"
@@ -299,4 +303,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "71816f91f19648698e89cafbcba9871ec805c9d3f41b6bde2e0601772ac86cd7"
+content-hash = "15a12e705a2b55af3d923e10a106d0099b481d90bbe8d309d5b6ce69f1f57932"
