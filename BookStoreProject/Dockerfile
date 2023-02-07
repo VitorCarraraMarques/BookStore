@@ -1,5 +1,5 @@
 # `python-base` sets up all our shared environment variables
-FROM python:3.8.1-slim as python-base
+FROM python:3.9.6-slim as python-base
 
     # python
 ENV PYTHONUNBUFFERED=1 \
@@ -13,7 +13,7 @@ ENV PYTHONUNBUFFERED=1 \
     \
     # poetry
     # https://python-poetry.org/docs/configuration/#using-environment-variables
-    POETRY_VERSION=1.0.3 \
+    POETRY_VERSION=1.3.2 \
     # make poetry install to this location
     POETRY_HOME="/opt/poetry" \
     # make poetry create the virtual environment in the project's root
@@ -50,7 +50,7 @@ WORKDIR $PYSETUP_PATH
 COPY poetry.lock pyproject.toml ./
 
 # install runtime deps - uses $POETRY_VIRTUALENVS_IN_PROJECT internally
-RUN poetry install --without dev
+RUN poetry install --no-dev
 
 # quicker install as runtime deps are already installed
 RUN poetry install
