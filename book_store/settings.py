@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -70,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'book_store.wsgi.application'
 
+STATIC_ROOT = BASE_DIR /'staticfiles'
+
+STATIC_FILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -151,4 +155,4 @@ SECRET_KEY = 'foo' #os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1'] #os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'herobookstore-api.herokuapp.com'] #os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
